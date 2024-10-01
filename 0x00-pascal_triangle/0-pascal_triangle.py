@@ -2,7 +2,7 @@
 
 def pascal_triangle(n):
     """
-    Generate Pascal's triangle up to n rows using both for and while loops.
+    Generate Pascal's triangle up to n rows.
     
     Args:
         n (int): The number of rows to generate.
@@ -15,17 +15,12 @@ def pascal_triangle(n):
         return []
     
     triangle = [[1]]
-    row_index = 1
     
-    while row_index < n:
-        previous_row = triangle[-1]
-        new_row = [1]
-        
-        for j in range(1, row_index):
-            new_row.append(previous_row[j-1] + previous_row[j])
-        
-        new_row.append(1)
-        triangle.append(new_row)
-        row_index += 1
+    for i in range(1, n):
+        row = [1]
+        for j in range(1, i):
+            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+        row.append(1)
+        triangle.append(row)
     
     return triangle
