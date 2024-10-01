@@ -1,5 +1,7 @@
 #!/usr/bin/pyhon3
-
+"""
+The following function explores the pascal triangle
+"""
 
 def pascal_triangle(n):
     """
