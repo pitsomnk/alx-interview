@@ -1,8 +1,4 @@
-#!/usr/bin/pyhon3
-"""
-The following function explores the pascal triangle
-"""
-
+#!/usr/bin/python3
 def pascal_triangle(n):
     """
     Generate Pascal's triangle up to n rows.
@@ -26,4 +22,3 @@ def pascal_triangle(n):
         triangle.append(row)
     
     return triangle
-
